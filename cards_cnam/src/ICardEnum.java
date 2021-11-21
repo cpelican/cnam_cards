@@ -1,3 +1,3 @@
-public interface ICardKind {
+public interface ICardEnum {
 	public String toString();
 }

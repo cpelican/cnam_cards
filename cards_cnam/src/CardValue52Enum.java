@@ -1,4 +1,4 @@
-public enum CardValue52Enum {
+public enum CardValue52Enum implements ICardEnum {
 	two, three, four, five, six;
 
 	public String toString() {

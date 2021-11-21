@@ -1,7 +1,7 @@
-public class Card32 extends BaseCard {	
-	Card32(String pattern, boolean isVisible, String kind, String value) {
+public class Card32 extends BaseCard {
+	public Card32(boolean isVisible, String pattern, String value, String kind) {
 		this.setPattern(pattern);
-		this.setIsVisible(isVisible);
+		this.setIsVisible(false);
 		this.value = value;
 		this.kind = kind;
 	}

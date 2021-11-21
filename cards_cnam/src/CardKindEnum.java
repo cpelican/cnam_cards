@@ -1,4 +1,4 @@
-public enum CardKindEnum implements ICardKind {
+public enum CardKindEnum implements ICardEnum {
 	spades, hearts, diamonds, clubs;
 
 	public String toString() {

@@ -1,4 +1,4 @@
-public enum CardValueTarotEnum {
+public enum CardValueTarotEnum implements ICardEnum {
 	knight;
 
 	public String toString() {

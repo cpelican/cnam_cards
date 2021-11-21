@@ -1,25 +1,15 @@
 public class Exo2 {
 	public static void main(String[] args) {
-		ICardPackage game = Package32.getInstance();
-		Package32.getInstance(); 
-		Package32.getInstance();
-		CardPackage cardPackage = new CardPackage(game);
-		System.out.println(cardPackage);
-		System.out.printf("Card number: %s \n", cardPackage.size());
-		
-		ICardPackage game52 = Package52.getInstance(); 
-		Package52.getInstance();
-		Package52.getInstance();
-		CardPackage cardPackage52 = new CardPackage(game52);
-		System.out.println(cardPackage52);
-		System.out.printf("Card number: %s \n", cardPackage52.size());
-		
-		ICardPackage gameTarot = PackageTarot.getInstance();
-		PackageTarot.getInstance();
-		PackageTarot.getInstance();
-		CardPackage cardPackageTarot = new CardPackage(gameTarot);
-		System.out.println(cardPackageTarot);
-		System.out.printf("Card number: %s \n", cardPackageTarot.size());
-	}
+		CardPackage<Card32> cardPackage = new CardPackage<Card32>(CardTypeEnum.Card32);
 
+		System.out.printf("%s: %s cards \n %s",cardPackage.getName(), cardPackage.size(), cardPackage.getCards());
+
+		CardPackage<Card52> cardPackage52 = new CardPackage<Card52>(CardTypeEnum.Card52);
+
+		System.out.printf("\n\n %s: %s cards \n %s",cardPackage52.getName(), cardPackage52.size(), cardPackage52.getCards());
+		
+		CardPackage<CardTarot> cardPackageTarot = new CardPackage<CardTarot>(CardTypeEnum.CardTarot);
+
+		System.out.printf("\n\n %s: %s cards \n %s",cardPackageTarot.getName(), cardPackageTarot.size(), cardPackageTarot.getCards());
+	}
 }

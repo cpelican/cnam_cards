@@ -1,4 +1,4 @@
-public enum CardValueBaseEnum {
+public enum CardValueBaseEnum implements ICardEnum {
 	ace, seven, eight, nine, ten, jack, queen, king;
 
 	public String toString() {
@@ -31,5 +31,4 @@ public enum CardValueBaseEnum {
 			}
 		return cardSign;
 	}
-
 }

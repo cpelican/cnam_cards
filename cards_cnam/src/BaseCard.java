@@ -37,6 +37,6 @@ public abstract class BaseCard implements ICard {
 	}
 	
 	public String toString() {
-		return String.format("Card: %s, %s, isVisible: %s, common pattern: %s", kind, value, isVisible, pattern);
+		return String.format("\n Card: %s, %s, isVisible: %s, common pattern: %s", kind, value, isVisible, pattern);
 	}
 }
