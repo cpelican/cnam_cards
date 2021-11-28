@@ -5,6 +5,7 @@ public interface ICard {
 	boolean isVisible();
 	void setPattern(String pattern);
 	void setIsVisible(boolean isVisible);
+
 	String toString();
 	public int getIntValue();
 }

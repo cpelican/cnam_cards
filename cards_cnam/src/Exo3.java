@@ -11,35 +11,35 @@ public class Exo3 {
 			CardPackage<ICard> cardPackage = model.getPackage();
 			CardTypeEnum cardType = cardPackage.getCardType();
 			PlusMinusGame<ICard> game = model.getGame();
-			
+
 			gameView.printCardType(cardType);
 			gameView.printPrepareGame();
 			gameView.printRules();
 			gameView.printStartGame();
-		
+
 			String response = null;
 			boolean doPlay = true;
 
 			while (doPlay) {
 				doPlay = false;
-	        	response = gameView.getUserGameResponseInput();
-	        	boolean hasNextPlay = false;
-	        	
-	        	if (game.canPlay(response)) {
-	        		hasNextPlay = game.playNext(response);
-		        	gameView.printGameState(game);
-	        	}
-	            
-	            if (game.isLastCard()) {
-	            	gameView.printHasWon(game.getPoints());
-	            } else if (!hasNextPlay) {
-	            	gameView.printGameIsFinished();
-	            } else {
-	            	doPlay = true;
-	            }
-	        }
-	        gameView.printCloseGame();
-        	gameView.closeScanner();
+				response = gameView.getUserGameResponseInput();
+				boolean hasNextPlay = false;
+
+				if (game.canPlay(response)) {
+					hasNextPlay = game.playNext(response);
+					gameView.printGameState(game);
+				}
+
+				if (game.isLastCard()) {
+					gameView.printHasWon(game.getPoints());
+				} else if (!hasNextPlay) {
+					gameView.printGameIsFinished();
+				} else {
+					doPlay = true;
+				}
+			}
+			gameView.printCloseGame();
+			gameView.closeScanner();
 		}
 	}
 }

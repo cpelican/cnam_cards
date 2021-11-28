@@ -4,7 +4,7 @@ public enum CardValueTarotEnum implements ICardEnum {
 	public String toString() {
 		return "cavalier";
 	}
-	
+
 	public int toInt() {
 		return 12;
 	}

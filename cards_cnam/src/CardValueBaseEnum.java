@@ -35,8 +35,8 @@ public enum CardValueBaseEnum implements ICardEnum {
 	public int toInt() {
 		int cardValue = 0;
 		switch (this) {
-			case seven:
-				cardValue = 7;
+		case seven:
+			cardValue = 7;
 				break;
 			case eight:
 				cardValue = 8;

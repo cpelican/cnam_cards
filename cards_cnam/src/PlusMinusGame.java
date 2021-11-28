@@ -19,7 +19,7 @@ public class PlusMinusGame<T extends ICard> {
 	public boolean isValidResponse(String input) {
 		return this.isPlusValue(input) || this.isMinusValue(input);
 	}
-	
+
 	public boolean isNoCardYet() {
 		return this.currentCard == null;
 	}

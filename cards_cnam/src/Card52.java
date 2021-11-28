@@ -3,4 +3,3 @@ public class Card52 extends Card32 {
 		super(isVisible, pattern, stringValue, value, kind);
 	}
 }
-
