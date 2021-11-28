@@ -73,4 +73,8 @@ public enum CardValueTrumpEnum implements ICardEnum {
 		}
 		return cardSign;
 	}
+	
+	public int toInt() {
+		return 1;
+	}
 }
