@@ -1,26 +1,25 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class CardPackage<T extends ICard> implements ICardPackage<T> {
 	protected String title = "Package";
 	private CardTypeEnum cardType = null;
-	List<T> cards = new ArrayList<T>();
+	List<T> cards = new ArrayList<T>(); // TODO: make it a stack
 
 	public CardPackage(CardTypeEnum cardEnum) {
 		this.cardType = cardEnum;
-		List<String[]> kindAndValues = cardEnum.getKindsAndValues();
+		List<CardConfig> cardConfig = cardEnum.getCardConfig();
 		
-		for (String[] config : kindAndValues) {
-			String kind = config[0];
-			String value = config[1];
+		for (CardConfig config : cardConfig) {
 			@SuppressWarnings("unchecked")
-			T card = (T) cardEnum.getInstance(false, this.title, kind, value);
+			T card = (T) cardEnum.getInstance(false, this.title, config.getStringValue(), config.getValue(), config.getKind());
 			cards.add(card);
 		}
 	}
 	
 	public String getName() {
-		return this.cardType.toString() + " package";
+		return this.getCardType().toString() + " package";
 	}
 
 	public List<T> getCards() {
@@ -29,5 +28,21 @@ public class CardPackage<T extends ICard> implements ICardPackage<T> {
 	
 	public int size() {
 		return this.cards.size();
+	}
+	
+	public T pop() {
+		T card = null;
+		if (this.cards.size() != 0) {
+			card = this.cards.remove(0); // todo, make sure the first index remains
+		}
+		return card;
+	}
+
+	public CardTypeEnum getCardType() {
+		return cardType;
+	}
+	
+	public void shuffle() {
+		Collections.shuffle(this.cards);
 	}
 }

@@ -1,6 +1,7 @@
 public abstract class BaseCard implements ICard {
 	protected String kind;
-	protected String value;
+	protected int value;
+	protected String stringValue;
 	protected String pattern;
 	protected boolean isVisible;
 	
@@ -8,7 +9,11 @@ public abstract class BaseCard implements ICard {
 		return kind;
 	}
 	
-	public String getValue() {
+	public String getStringValue() {
+		return stringValue;
+	}
+	
+	public int getIntValue() {
 		return value;
 	}
 	
@@ -21,7 +26,7 @@ public abstract class BaseCard implements ICard {
 	}
 	
 	public void setValue(String value) {
-		this.value = value;
+		this.stringValue = value;
 	}
 	
 	public void setKind(String kind) {
@@ -37,6 +42,6 @@ public abstract class BaseCard implements ICard {
 	}
 	
 	public String toString() {
-		return String.format("\n Card: %s, %s, isVisible: %s, common pattern: %s", kind, value, isVisible, pattern);
+		return String.format("Card: %s de %s, value: %s, isVisible: %s, common pattern: %s \n", stringValue, kind, value, isVisible, pattern);
 	}
 }
