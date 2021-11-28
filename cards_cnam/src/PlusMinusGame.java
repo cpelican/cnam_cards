@@ -1,3 +1,6 @@
+import cardPackages.CardPackage;
+import cards.ICard;
+
 public class PlusMinusGame<T extends ICard> {
 	private CardPackage<T> cardPackage = null;
 	private T currentCard = null;

@@ -1,5 +1,11 @@
+package cards.enums;
 import java.util.ArrayList;
 import java.util.List;
+
+import cards.Card32;
+import cards.Card52;
+import cards.CardTarot;
+import cards.ICard;
 
 public enum CardTypeEnum {
 	Card32 {

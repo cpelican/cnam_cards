@@ -1,3 +1,4 @@
+package cards.enums;
 public class CardConfig {
 	private String kind = null;
 	private String stringValue = null;

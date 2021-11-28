@@ -1,3 +1,5 @@
+package cards.enums;
+
 public enum CardValue52Enum implements ICardEnum {
 	two, three, four, five, six;
 

@@ -1,6 +1,11 @@
+package cardPackages;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import cards.ICard;
+import cards.enums.CardConfig;
+import cards.enums.CardTypeEnum;
 
 public class CardPackage<T extends ICard> implements ICardPackage<T> {
 	protected String title = "Package";

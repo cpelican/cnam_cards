@@ -1,5 +1,9 @@
+package cardPackages;
 import java.util.ArrayList;
 import java.util.List;
+
+import cards.ICard;
+import cards.enums.CardTypeEnum;
 
 interface ICardPackage<T extends ICard> {
 	List<ICard> cards = new ArrayList<ICard>();

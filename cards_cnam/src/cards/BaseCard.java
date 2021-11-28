@@ -1,3 +1,5 @@
+package cards;
+
 public abstract class BaseCard implements ICard {
 	protected String kind;
 	protected int value;

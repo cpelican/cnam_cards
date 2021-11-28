@@ -1,3 +1,5 @@
+package cards.enums;
+
 public enum CardValueBaseEnum implements ICardEnum {
 	ace, seven, eight, nine, ten, jack, queen, king;
 

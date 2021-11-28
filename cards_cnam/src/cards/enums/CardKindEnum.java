@@ -1,3 +1,5 @@
+package cards.enums;
+
 public enum CardKindEnum implements ICardEnum {
 	spades, hearts, diamonds, clubs;
 

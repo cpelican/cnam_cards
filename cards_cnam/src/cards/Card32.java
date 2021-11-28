@@ -1,3 +1,4 @@
+package cards;
 public class Card32 extends BaseCard {
 	public Card32(boolean isVisible, String pattern, String stringValue, int value, String kind) {
 		this.setPattern(pattern);

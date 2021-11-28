@@ -1,3 +1,4 @@
+package cards;
 public interface ICard {
 	String getKind();
 	String getStringValue();

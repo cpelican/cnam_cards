@@ -1,3 +1,7 @@
+import cardPackages.CardPackage;
+import cards.ICard;
+import cards.enums.CardTypeEnum;
+
 public class GameModel<T extends ICard> {
 	CardTypeEnum theCardType = null;
 	CardPackage<T> cardPackage = null;

@@ -1,3 +1,7 @@
+import cardPackages.CardPackage;
+import cards.ICard;
+import cards.enums.CardTypeEnum;
+
 public class Exo3 {
 	public static void main(String[] args) {
 		GameView<ICard> gameView = new GameView<ICard>();

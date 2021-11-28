@@ -1,6 +1,9 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import cards.ICard;
+import cards.enums.CardTypeEnum;
+
 public class GameView<T extends ICard> {
 	Scanner scanner = null;
 	
